@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-issue-config.json
+blank_issues_enabled: true
+contact_links:
+  - name: Manufactorium GitHub Community Discussion Page
+    url: https://github.com/glektarssza/manufactorium/discussions
+    about: Please look for community support and suggest new features here before submitting feature requests.
