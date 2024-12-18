@@ -1,0 +1,99 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-issue-forms.json
+name: Bug Report
+description: File a bug report.
+title: "[bug] "
+labels: [Bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to provide us a bug report! Please provide
+        the following information.
+  - type: textarea
+    id: description
+    validations:
+      required: true
+    attributes:
+      label: Description
+      description: Please describe the bug that occurred.
+      placeholder: I was playing the game and oh no!
+  - type: textarea
+    id: reproduce-steps
+    validations:
+      required: true
+    attributes:
+      label: Steps to Reproduce
+      description: Please describe how to reproduce the bug.
+      placeholder: |
+        1. Do thing one.
+        2. Do thing two.
+        3. Do thing three.
+  - type: textarea
+    id: expected
+    validations:
+      required: true
+    attributes:
+      label: Expected Behaviour
+      description: Please describe what you expected to happen.
+      placeholder: The game doesn't crash!
+  - type: textarea
+    id: actual
+    validations:
+      required: true
+    attributes:
+      label: Actual Behaviour
+      description: Please describe what actually happened.
+      placeholder: The game crashed!
+  - type: input
+    id: mod-pack-version
+    validations:
+      required: true
+    attributes:
+      label: Mod Pack Version
+      description: The version of the mod pack you were playing.
+      placeholder: vX.Y.Z
+  - type: textarea
+    id: java-version
+    validations:
+      required: true
+    attributes:
+      label: Java Version
+      description: The version of Java you were using.
+      placeholder: Temurin JRE 17.1.0 ...
+      render: text
+  - type: textarea
+    id: jvm-args
+    validations:
+      required: false
+    attributes:
+      label: JVM Arguments
+      description: Any additional JVM arguments you were using.
+      placeholder: -Xmx8G -Xmm8G ...
+      render: text
+  - type: textarea
+    id: latest-log
+    validations:
+      required: false
+    attributes:
+      label: Most Recent `latest.log`
+      description: The contents of your most recent `latest.log` file.
+      render: text
+  - type: textarea
+    id: crash-report
+    validations:
+      required: false
+    attributes:
+      label: Most Recent Crash Report
+      description: The contents of your most recent crash report (if applicable).
+      render: text
+  - type: checkboxes
+    id: attestation
+    attributes:
+      label: "I confirm that:"
+      options:
+        - label: I have searched for a similar bug report and found none.
+          required: true
+        - label: I have not installed any extra mods (or uninstalled/disabled them if I have) prior to filing this bug report.
+          required: true
+        - label: All the information above is accurate to the best of my knowledge.
+          required: true
